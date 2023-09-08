@@ -24,11 +24,11 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: "http://localhost:3000",
-    credentials: true, 
+    credentials: true,
   })
 );
 
-app.options('*', cors()); // Handle preflight requests for all routes
+app.options('*', cors()); 
 
 app.use(express.json());
 app.use(bodyParser.json());
@@ -38,4 +38,4 @@ app.use("/login", authRoutes);
 app.use("/", userRoute);
 app.listen(process.env.PORT, () => {
   console.log("Server is running at port " + process.env.PORT);
-});
+}); ////hai
